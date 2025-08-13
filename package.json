@@ -1,11 +1,23 @@
 {
   "name": "crud-customers",
+  name → Nombre del proyecto (aquí es crud-customers), probablemente un CRUD para clientes.
+  
   "version": "1.0.0",
-  "main": "server.js",
+  version → Versión actual del proyecto siguiendo el formato semántico (Mayor.Menor.Patch).
+  
+  "main": "server.js",  
+  main → Archivo principal que se ejecuta al iniciar el proyecto (el punto de entrada).
+
   "type": "module",
+  type → Define el sistema de módulos usado:
+  "module" → permite usar ES Modules (import / export).
+
   "scripts": {
     "start": "node server.js"
-  },
+    scripts → Comandos personalizados que puedes ejecutar con npm run.
+    "start" → Cuando hagas npm start, correrá node server.js.
+    },
+  
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -14,3 +26,16 @@
     "mysql2": "^3.6.0"
   }
 }
+dependencies → Librerías que el proyecto necesita para funcionar:
+
+cors → Permite habilitar CORS (para aceptar peticiones desde otros dominios).
+
+dotenv → Carga variables de entorno desde un archivo .env.
+
+express → Framework para crear servidores HTTP en Node.js.
+
+express-validator → Middleware para validar datos que llegan en peticiones HTTP.
+
+mysql2 → Cliente para conectarse a bases de datos MySQL desde Node.js.
+
+El símbolo ^ delante de la versión significa que se puede actualizar a cualquier versión compatible dentro de la misma versión mayor.
