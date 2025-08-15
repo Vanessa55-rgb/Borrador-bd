@@ -63,6 +63,8 @@
  * - Frontend CRUD: tiene errores de mala dos errores de mala ortografia, la carpeta es fronted y el espacio en el index script.js
      la página HTML no logra conectarse al backend por error en `localhost`
  *   (probable problema de puertos o configuración CORS).
+
+     el error esta index    <script src="./script.js"></script>
  
  * - CRUD API: implementado, pero sin poder probar completo por el error de conexión anterior
  
@@ -88,9 +90,4 @@
  * - El fallo en el frontend/CRUD se debe a que el fetch apunta a `localhost` sin configuración adecuada.
  * - La carga masiva probablemente requiere habilitar `LOAD DATA LOCAL INFILE` y ajustar rutas absolutas.
  * - Falta explicar el proceso de normalización en el README y adjuntar capturas.
- * 
-
-
-
-
-
+ 
