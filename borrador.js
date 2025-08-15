@@ -48,11 +48,18 @@
  * --------------------------------------------------------------------------------
  * ⚠️ Qué intenté pero no funciona:
  * --------------------------------------------------------------------------------
+   - Cambiar nombre modelo relacional rm
  * - Carga masiva desde CSV: hice script `sql/bulk_load.sql`, pero al ejecutarlo MySQL no insertó los datos
  *   (posibles problemas de ruta, permisos o sintaxis).
  * 
- * - Frontend CRUD: la página HTML no logra conectarse al backend por error en `localhost`
+
+   SQL poner SHOW TABLES, para mostrarle a el que si las hice 
+   
+ * - Frontend CRUD: tiene errores de mala dos errores de mala ortografia, la carpeta es fronted y el espacio en el index script.js
+    En el readme tambien esta mal escrito fronted
+     la página HTML no logra conectarse al backend por error en `localhost`
  *   (probable problema de puertos o configuración CORS).
+     correcccion archivo .env PORT=3306 a  PORT=3000
  * 
  * - CRUD API: implementado, pero sin poder probar completo por el error de conexión anterior
  * - En resumen:El CRUD API como tal está en backend/routes/customers.js
@@ -77,3 +84,4 @@
  * - La carga masiva probablemente requiere habilitar `LOAD DATA LOCAL INFILE` y ajustar rutas absolutas.
  * - Falta explicar el proceso de normalización en el README y adjuntar capturas.
  * 
+
