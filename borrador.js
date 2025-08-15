@@ -55,7 +55,7 @@
 
    - correcccion archivo .env PORT=3306 a  PORT=3000
 
-   - SQL poner SHOW TABLES, para mostrarle a el que si las hice 
+   - SQL poner SHOW TABLES; para mostrarle a el que si las hice 
    
  * - Carga masiva desde CSV: hice script `sql/bulk_load.sql`, pero al ejecutarlo MySQL no insertó los datos
  *   (posibles problemas de ruta, permisos o sintaxis).
@@ -89,6 +89,7 @@
  * - La carga masiva probablemente requiere habilitar `LOAD DATA LOCAL INFILE` y ajustar rutas absolutas.
  * - Falta explicar el proceso de normalización en el README y adjuntar capturas.
  * 
+
 
 
 
