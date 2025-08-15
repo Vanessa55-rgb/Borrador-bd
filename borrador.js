@@ -34,6 +34,7 @@
  *       > Platforms (por dónde se paga: Nequi, Daviplata, etc.)
  *       > Transactions (el movimiento financiero asociado)
  *   - Las demás tablas (Customers, Platforms, TransactionStatus) son de soporte o catálogo.
+ 
  * - En el CRUD implementado no se trabajó sobre Invoices, sino sobre Customers, pero
  *   Invoices sigue siendo la tabla central para consultas avanzadas.
 
@@ -49,19 +50,22 @@
  * ⚠️ Qué intenté pero no funciona:
  * --------------------------------------------------------------------------------
    - Cambiar nombre modelo relacional rm
+
+   - correcccion archivo .env PORT=3306 a  PORT=3000
+
+   - SQL poner SHOW TABLES, para mostrarle a el que si las hice 
+   
  * - Carga masiva desde CSV: hice script `sql/bulk_load.sql`, pero al ejecutarlo MySQL no insertó los datos
  *   (posibles problemas de ruta, permisos o sintaxis).
- * 
 
-   SQL poner SHOW TABLES, para mostrarle a el que si las hice 
-   
  * - Frontend CRUD: tiene errores de mala dos errores de mala ortografia, la carpeta es fronted y el espacio en el index script.js
      la página HTML no logra conectarse al backend por error en `localhost`
  *   (probable problema de puertos o configuración CORS).
-     correcccion archivo .env PORT=3306 a  PORT=3000
- * 
+ 
  * - CRUD API: implementado, pero sin poder probar completo por el error de conexión anterior
+ 
  * - En resumen:El CRUD API como tal está en backend/routes/customers.js
+ 
  * - El archivo server.js es el que lo arranca y lo expone en un puerto.
  * 
  * --------------------------------------------------------------------------------
@@ -83,5 +87,6 @@
  * - La carga masiva probablemente requiere habilitar `LOAD DATA LOCAL INFILE` y ajustar rutas absolutas.
  * - Falta explicar el proceso de normalización en el README y adjuntar capturas.
  * 
+
 
 
