@@ -49,6 +49,8 @@
  * --------------------------------------------------------------------------------
  * ⚠️ Qué intenté pero no funciona:
  * --------------------------------------------------------------------------------
+   - npm install express mysql2 cors dotenv 
+   
    - Cambiar nombre modelo relacional rm
 
    - correcccion archivo .env PORT=3306 a  PORT=3000
@@ -87,6 +89,7 @@
  * - La carga masiva probablemente requiere habilitar `LOAD DATA LOCAL INFILE` y ajustar rutas absolutas.
  * - Falta explicar el proceso de normalización en el README y adjuntar capturas.
  * 
+
 
 
 
