@@ -45,6 +45,7 @@
  * - Programé el CRUD de la entidad Customers en Express (`backend/routes/customers.js`).
 
  * - Desarrollé un frontend básico (`fronted/index.html`, `fronted/script.js`).
+
  * 
  * --------------------------------------------------------------------------------
  * ⚠️ Qué intenté pero no funciona:
@@ -54,21 +55,52 @@
    - Cambiar nombre modelo relacional rm
 
    - correcccion archivo .env PORT=3306 a  PORT=3000
+    añadir esto a la linea y poner DB_PORT=3306
+DB_HOST=bl15tugvj0fcvaicvrrb-mysql.services.clever-cloud.com
+DB_USER=u8hn3abi0g9ndnha
+DB_PASSWORD=PgYx0aOc8W0EigLPt1AW
+DB_NAME=bl15tugvj0fcvaicvrrb
+DB_PORT=3306
+PORT=3000
 
+db.js
+cambiar linea 8 y 10
+import mysql from "mysql2/promise";
+import dotenv from "dotenv";
+dotenv.config();
+
+export const connection = await mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
+
+ * - Frontend CRUD: tiene errores de mala dos errores de mala ortografia, la carpeta es fronted y el espacio en el index script.js
+     la página HTML no logra conectarse al backend por error en `localhost`
+ *   (probable problema de puertos o configuración CORS).
+      el error esta index    <script src="./script.js"></script>
+      cambiar el nombre por main.js
+
+ main.js o script.js 
+ linea 1  const API_URL = "http://localhost:3000";
+ linea 4 const res = await fetch(`${API_URL}/customers/`);
+ linea 37    await fetch(API_URL, "/customers/postCustomers", { method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(customer) });
+ 
    - SQL poner SHOW TABLES; para mostrarle a el que si las hice 
    
  * - Carga masiva desde CSV: hice script `sql/bulk_load.sql`, pero al ejecutarlo MySQL no insertó los datos
  *   (posibles problemas de ruta, permisos o sintaxis).
 
- * - Frontend CRUD: tiene errores de mala dos errores de mala ortografia, la carpeta es fronted y el espacio en el index script.js
-     la página HTML no logra conectarse al backend por error en `localhost`
- *   (probable problema de puertos o configuración CORS).
 
-     el error esta index    <script src="./script.js"></script>
- 
+
  * - CRUD API: implementado, pero sin poder probar completo por el error de conexión anterior
  
- * - En resumen:El CRUD API como tal está en backend/routes/customers.js
  
  * - El archivo server.js es el que lo arranca y lo expone en un puerto.
  * 
@@ -91,3 +123,4 @@
  * - La carga masiva probablemente requiere habilitar `LOAD DATA LOCAL INFILE` y ajustar rutas absolutas.
  * - Falta explicar el proceso de normalización en el README y adjuntar capturas.
  
+
