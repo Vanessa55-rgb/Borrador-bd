@@ -93,6 +93,10 @@ export const connection = await mysql.createPool({
  linea 37    await fetch(API_URL, "/customers/postCustomers", { method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(customer) });
  
    - SQL poner SHOW TABLES; para mostrarle a el que si las hice 
+   hacer en sql 
+   INSERT INTO customers (parametros dentro de la tabla) VALUES (?,?,?,?,?) ;
+   
+   
    
  * - Carga masiva desde CSV: hice script `sql/bulk_load.sql`, pero al ejecutarlo MySQL no insertó los datos
  *   (posibles problemas de ruta, permisos o sintaxis).
