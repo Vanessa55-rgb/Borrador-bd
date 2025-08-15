@@ -94,7 +94,7 @@ export const connection = await mysql.createPool({
  
    - SQL poner SHOW TABLES; para mostrarle a el que si las hice 
    hacer en sql 
-   INSERT INTO customers (parametros dentro de la tabla) VALUES (?,?,?,?,?) ;
+   INSERT INTO customers (name,identification,address,phone_number,email) VALUES (?,?,?,?,?);
    
    
    
